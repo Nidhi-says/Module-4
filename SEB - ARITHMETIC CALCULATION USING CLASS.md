@@ -1,45 +1,32 @@
-# Exp.No:20  
-## SEB - ARITHMETIC CALCULATION USING CLASS
-
----
+# Exp.No:4e
+## SEB - RETURN A DICTIONARY
 
 ### AIM  
-To write a Python program to perform addition and division operations using a class. The class should be named `Saveetha`, and the function names should be `setvalues` (to set `a` and `b` values), `add`, and `div`. The program should handle the following cases:  
-- `choice 1` → Perform addition  
-- `choice 2` → Perform division  
-- `choice 0` → Exit  
-- For other choices, print 'Invalid choice'
-
----
+To write a python program that asks the user to enter an integer n and return a dictionary whose keys are integers 1, 2, 3, ... n and whose values ​​are 1! , 2! , 3! , … , n!
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Create a class `Saveetha`.  
-3. Define the following methods inside the `Saveetha` class:  
-   - `__init__(self)`: Initializes `a` and `b` to zero.  
-   - `setvalues(self, a, b)`: Sets the values of `a` and `b`.  
-   - `add(self)`: Performs the addition operation.  
-   - `div(self)`: Performs the division operation. If `b` is zero, returns an error message for division by zero.  
-4. Create a `main()` function.  
-5. Take input from the user for the values of `a` and `b` using `setvalues(a, b)` method.  
-6. Use a `while True` loop to repeatedly ask the user for a choice:  
-   - If the choice is 1, call the `add()` method and print the result.  
-   - If the choice is 2, call the `div()` method and print the result. Handle division by zero.  
-   - If the choice is 0, print "Exiting!" and exit the loop.  
-   - If the choice is not 1, 2, or 0, print "Invalid choice".  
-7. Terminate the program.
+1. Take an integer input `a` from the user.
+2. Initialize an empty dictionary `d` and a variable `f` with value `1`.
+3. Loop from `1` to `a-1`, multiplying `f` by the current number `i` at each step.
+4. Store each `i` as a key and its corresponding factorial `f` as the value in dictionary `d`.
+5. Print the final dictionary `d` showing numbers and their factorials.
 
----
 
 ### PROGRAM
 
 ```
-
-
-
+a=int(input())
+d={}
+f=1
+for i in range(1,a):
+    f*=i
+    d[i]=f
+print("The obtained dictionary is d = ",d)
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/63a3fa2f-350a-411f-b7f0-4eda8b1ad23a)
 
 ### RESULT
+Thus a python program that asks the user to enter an integer n and return a dictionary is implemented successfully.
