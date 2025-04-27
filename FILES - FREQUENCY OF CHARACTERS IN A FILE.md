@@ -1,12 +1,9 @@
-# Exp.No:18  
+# Exp.No:4d
 ## FILES - FREQUENCY OF CHARACTERS IN A FILE
-
----
 
 ### AIM  
 To write a Python program that reads a file and counts the frequency of each character in it.
 
----
 
 ### ALGORITHM
 
@@ -30,11 +27,31 @@ To write a Python program that reads a file and counts the frequency of each cha
 ### PROGRAM
 
 ```
+from collections import defaultdict
 
+
+def create_file(file_path, content):
+    with open(file_path, 'w') as file:
+        file.write(content)
+
+# Function to calculate character frequencies
+def char_frequency(file_path):
+    char_count=defaultdict(int)
+    with open(file_path,'r')as file:
+        for line in file:
+            for char in line:
+                char_count[char]+=1
+    return char_count
+file_path="example.txt"
+file_content="saveetha engineering college"
+create_file(file_path,file_content)
 ```
 
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/9fb2e087-39bf-4aad-99de-288a8959a67d)
+![image](https://github.com/user-attachments/assets/5c7dc7ab-11f1-47a3-b004-73dd0d4fbef5)
 
 
 ### RESULT
+Thus a Python program that reads a file and counts the frequency of each character is successfully implemented.
